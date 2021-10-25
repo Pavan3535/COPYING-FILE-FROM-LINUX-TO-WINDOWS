@@ -1,0 +1,17 @@
+---
+- name: data copy
+  hosts: win
+  tasks:
+  
+  - name: create dir.
+    win_file:
+      path: C:\Users\data_ansible
+      state: directory
+
+  - name: copy
+    win_copy:
+      src: /home/pavan
+      dest: C:\Users\data_ansible
+
+      
+       
